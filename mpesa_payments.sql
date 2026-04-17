@@ -1,0 +1,84 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: sql201.infinityfree.com
+-- Generation Time: Apr 17, 2026 at 12:16 PM
+-- Server version: 11.4.10-MariaDB
+-- PHP Version: 7.2.22
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `if0_41644534_mpesa_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mpesa_payments`
+--
+
+CREATE TABLE `mpesa_payments` (
+  `id` int(11) NOT NULL,
+  `transaction_id` varchar(50) DEFAULT NULL,
+  `merchant_request_id` varchar(100) NOT NULL,
+  `amount` decimal(10,2) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `status` varchar(100) DEFAULT NULL,
+  `timestamp` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `mpesa_payments`
+--
+
+INSERT INTO `mpesa_payments` (`id`, `transaction_id`, `merchant_request_id`, `amount`, `phone`, `status`, `timestamp`) VALUES
+(1, 'ws_CO_16042026185251756707224513', '81b9-4f93-88c9-42e42ccd826124497', NULL, NULL, 'PENDING', '2026-04-16 15:52:51'),
+(2, 'ws_CO_16042026185355349707224513', 'ec2e-4547-ab67-14cd8939577545304', NULL, NULL, 'PENDING', '2026-04-16 15:53:54'),
+(3, 'ws_CO_16042026185413723707224513', '81b9-4f93-88c9-42e42ccd826124569', NULL, NULL, 'PENDING', '2026-04-16 15:54:13'),
+(4, 'ws_CO_16042026185607728707224513', 'ec2e-4547-ab67-14cd8939577545368', NULL, NULL, 'PENDING', '2026-04-16 15:56:07'),
+(5, 'ws_CO_16042026185855394707224513', '81b9-4f93-88c9-42e42ccd826124675', NULL, NULL, 'PENDING', '2026-04-16 15:58:54'),
+(6, 'ws_CO_16042026190036358707224513', 'ec2e-4547-ab67-14cd8939577545527', NULL, NULL, 'PENDING', '2026-04-16 16:00:35'),
+(7, 'ws_CO_16042026190105232707224513', 'ec2e-4547-ab67-14cd8939577545538', NULL, NULL, 'PENDING', '2026-04-16 16:01:04'),
+(8, 'ws_CO_16042026190520235707224513', 'ec2e-4547-ab67-14cd8939577545641', NULL, NULL, 'PENDING', '2026-04-16 16:05:19'),
+(9, 'ws_CO_16042026190553272707224513', 'ec2e-4547-ab67-14cd8939577545649', NULL, NULL, 'PENDING', '2026-04-16 16:05:52'),
+(10, 'ws_CO_16042026191309061707224513', '81b9-4f93-88c9-42e42ccd826125202', NULL, NULL, 'PENDING', '2026-04-16 16:13:08'),
+(11, 'ws_CO_16042026191326456707224513', 'ec2e-4547-ab67-14cd8939577545892', NULL, NULL, 'PENDING', '2026-04-16 16:13:25'),
+(12, 'ws_CO_16042026191827174707224513', '81b9-4f93-88c9-42e42ccd826125389', NULL, NULL, 'PENDING', '2026-04-16 16:18:26'),
+(13, 'ws_CO_16042026191852758707224513', '81b9-4f93-88c9-42e42ccd826125399', NULL, NULL, 'PENDING', '2026-04-16 16:18:52'),
+(14, 'ws_CO_16042026192010207707224513', 'ec2e-4547-ab67-14cd8939577546149', NULL, NULL, 'PENDING', '2026-04-16 16:20:09');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `mpesa_payments`
+--
+ALTER TABLE `mpesa_payments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `mpesa_payments`
+--
+ALTER TABLE `mpesa_payments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
